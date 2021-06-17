@@ -1,13 +1,13 @@
 <template>
  <top-header/>
- <router-view :listData="listData"></router-view>
+ <router-view :pdata="pdata"></router-view>
  <bottom-footer/>
 </template>
 
 <script>
 import header from './components/header.vue'
 import footer from './components/footer.vue'
-import listData from './listData.js'
+import pdata from './pdata.js'
 export default {
   name:'App',
   components:{
@@ -16,7 +16,9 @@ export default {
   },
   data(){
     return{
-     listData:listData
+     pdata:pdata,
+
+
     }
   }
 
