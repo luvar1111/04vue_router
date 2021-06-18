@@ -13,7 +13,7 @@
       <div class="row mb-5">
         <div class="col-sm-6 col-md-3 text-center" v-for="(item,i) in 4" :key="i">
           <img :src="pdata[i].image" alt="" class="w-100">
-          <b>{{pdata[i].title}}</b>
+          <div @click="$emit('pOpen',pdata[i].id)"><b>{{pdata[i].title}}</b></div>
         </div>
       </div>
       <div class="btn btn-primary d-block m-auto">

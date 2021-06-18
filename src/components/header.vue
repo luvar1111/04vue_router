@@ -6,7 +6,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav justify-content-md-center w-100">
-      <li v-for="(item,i) in menu" :key="i" class="nav-item active text-center" style="flex:1">
+      <li v-for="(item,i) in menu" :key="i" class="nav-item active text-center" style="flex:1" @click="close">
         <router-link :to="menu[i].link" class="nav-link">{{menu[i].title}}</router-link>
       </li>
     </ul>
@@ -21,10 +21,15 @@ export default {
         return{
             menu:[
                 {title:'home',link:'/'},
-                {title:'company',link:'/company'},
-                {title:'product',link:'/product'}
+                {title:'product',link:'/product'},
+                {title:'board',link:'/board'}
             ]
         }
+    },
+    methods:{
+      close:function(){
+        document.getElementById("navbarNav").classList.remove("show")
+      }
     }
 
 }

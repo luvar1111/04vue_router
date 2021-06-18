@@ -1,5 +1,5 @@
 <template>
-  <h2>company</h2>
+  <h2>board</h2>
 </template>
 
 <script>
