@@ -16,7 +16,7 @@
           <div @click="$emit('pOpen',pdata[i].id)"><b>{{pdata[i].title}}</b></div>
         </div>
       </div>
-      <div class="btn btn-primary d-block m-auto">
+      <div class="btn btn-primary d-block m-auto" style="width:100px">
         <router-link to="/product">more</router-link>
       </div>
     </div>

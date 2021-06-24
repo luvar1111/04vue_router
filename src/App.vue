@@ -10,7 +10,8 @@
    <pPop :pdata="pdata" :pNum="pNum" :pView="pView" @pClose="pView=false"/>
  </transition>
  <top-header/>
- <router-view :pdata="pdata" @pOpen="pView=true;pNum=$event"></router-view>
+ <router-view :pdata="pdata" @pOpen="pView=true;pNum=$event"  :bdata="bdata"></router-view>
+ 
  <bottom-footer/>
 </template>
 
@@ -19,6 +20,7 @@ import header from './components/header.vue'
 import pPop from './components/pPop.vue'
 import footer from './components/footer.vue'
 import pdata from './pdata.js'
+import bdata from './bdata.js'
 export default {
   name:'App',
   components:{
@@ -29,6 +31,7 @@ export default {
   data(){
     return{
      pdata:pdata,
+     bdata:bdata,
      pView:false,
      pNum:0,
 
